@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-escena',
-  templateUrl: './escena.component.html',
-  styleUrls: ['./escena.component.sass']
+   selector: 'app-escena',
+   templateUrl: './escena.component.html',
+   styleUrls: ['./escena.component.sass']
 })
+
 export class EscenaComponent implements OnInit {
+   // titulo01 = "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial";
 
-  constructor() { }
+   @Input() titulo:string = ''; // decorate the property with @Input()
 
-  ngOnInit(): void {
-  }
+   constructor() { }
+
+   ngOnInit(): void {
+   }
 
 }
