@@ -1,7 +1,5 @@
 <!-- <h1>Home</h1>  -->  
 <!-- <h5 *ngFor="let item of titulos">Titulo es : {{item}} </h5> -->
+<!--  <app-escena *ngFor="let currentItem of titulos" [titulo]="currentItem"></app-escena>   -->
 
-<app-escena *ngFor="let currentItem of titulos" [titulo]="currentItem"></app-escena>
-
-
-
+<app-escena [titulo]=titulos></app-escena>

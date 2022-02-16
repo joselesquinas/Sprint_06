@@ -1,4 +1,10 @@
-
 <!-- <span>{{titulo01}}  </span> -->
- <p>{{titulo}} </p> 
 
+<!-- <div style="text-align: center; border: 2px solid #c3c3c3;" class="div-titulo"> {{titulo}} </div>  -->
+ <button   (click)="prevTitulo()" >Anterior</button>
+ <button   (click)="nextTitulo()" >Següent</button>
+ 
+<p class="div-titulo" *ngFor="let sentence of titulo; let i = index" [ngClass]="{'is-active': currentSentence == i }">
+   {{currentSentence}}-{{i}}
+   <button (click)="setUserAnswer(i)">{{ sentence.txt }}</button>
+</p>
