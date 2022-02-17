@@ -1,10 +1,17 @@
-<!-- <span>{{titulo01}}  </span> -->
+<!--  escena.componet.html  -->
 
-<!-- <div style="text-align: center; border: 2px solid #c3c3c3;" class="div-titulo"> {{titulo}} </div>  -->
- <button   (click)="prevTitulo()" >Anterior</button>
- <button   (click)="nextTitulo()" >Següent</button>
- 
-<p class="div-titulo" *ngFor="let sentence of titulo; let i = index" [ngClass]="{'is-active': currentSentence == i }">
-   {{currentSentence}}-{{i}}
-   <button (click)="setUserAnswer(i)">{{ sentence.txt }}</button>
-</p>
+<!--     <img src="../../assets/img/1.jpg" alt="">  -->
+<div [ngStyle]="{ backgroundImage: getUrlimg() }">
+  <button (click)="prevTitulo()">Anterior</button>
+  <button (click)="nextTitulo()">Següent</button>
+  <br />
+  <p
+    class="div-titulo"
+    *ngFor="let sentence of titulo; let i = index"
+    [ngClass]="{ 'div-titulo-activo': currentSentence == i }"
+  >
+    {{ sentence.txt }}
+  </p>
+  <br />
+  <br />
+</div>
