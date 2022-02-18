@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class EscenaComponent implements OnInit {
 
    public currentSentence: number = 0;
-
+   
    @Input() titulo: any; // decorate the property with @Input()
 
    prevTitulo(): void {
@@ -25,8 +25,7 @@ export class EscenaComponent implements OnInit {
    }
 
    getUrlimg(){
-      let numTxt: string = (this.currentSentence + 1).toString();
-      let imagen: string = numTxt+'.jpg';
+      let imagen: string = this.titulo[this.currentSentence].img;
       return 'url(../../assets/img/' + imagen + ')';
       }
 
